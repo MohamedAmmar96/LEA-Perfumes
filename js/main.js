@@ -239,7 +239,7 @@ $(document).ready(function() {
 
     // This is To Open search Box
     $(".search").click(function() {
-        $("body").addClass("overflow");
+        $("body").toggleClass("overflow");
         $(".overlay-box").slideToggle(300);
         $(".search .search-icon").toggleClass("open-search close-search")
         $(".search-box").fadeToggle(500);
@@ -247,9 +247,9 @@ $(document).ready(function() {
     });
 
     $(".overlay-box").click(function() {
+        $("body").toggleClass("overflow");
         $(".search .search-icon").toggleClass("open-search close-search")
         $(".search-box").fadeToggle(500);
-        $("body").removeClass("overflow");
         $(".overlay-box").slideUp(500);
         $(".search").toggleClass("back-color");
     });
