@@ -240,24 +240,24 @@ $(document).ready(function() {
     // This is To Open search Box
     $(".search").click(function() {
         $("body").addClass("overflow");
-        $(".overlay-box").slideDown(300);
+        $(".overlay-box").slideToggle(300);
+        $(".search .search-icon").toggleClass("open-search close-search")
+        $(".search-box").fadeToggle(500);
+        $(this).toggleClass("back-color");
     });
-    $(".search").click(function() {
-        $(".search .search-icon").removeClass("open-search")
-        $(".search .search-icon").addClass("close-search")
-        $(".close-search-btn").fadeIn(500)
-        $(".search-box").fadeIn(500);
-    });
-    $(".close-search-btn,.overlay-box").click(function() {
+
+    $(".overlay-box").click(function() {
+        $(".search .search-icon").toggleClass("open-search close-search")
+        $(".search-box").fadeToggle(500);
         $("body").removeClass("overflow");
         $(".overlay-box").slideUp(500);
+        $(".search").toggleClass("back-color");
     });
-    $(".close-search-btn,.overlay-box").click(function() {
-        $(".search .search-icon").addClass("open-search")
-        $(".search .search-icon").removeClass("close-search")
-        $(".close-search-btn").fadeOut(300)
-        $(".search-box").fadeOut(300);
-    });
+    // $(".search,.overlay-box").click(function() {
+    //     $(".search .search-icon").addClass("open-search")
+    //     $(".search .search-icon").removeClass("close-search")
+    //     $(".search-box").fadeOut(300);
+    // });
 
 
     //This is to Open Side Menu in Small Screens
