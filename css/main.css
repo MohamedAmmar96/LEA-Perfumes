@@ -220,6 +220,12 @@
             background-color: var(--main);
             color: #fff;
             position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        
+        html[dir=rtl] .back-color {
+            left: auto;
             right: 50%;
             transform: translate(50%);
         }
